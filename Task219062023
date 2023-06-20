@@ -1,0 +1,33 @@
+CREATE TABLE Students(
+id INT,
+dept VARCHAR(6),
+name VARCHAR(20),
+age INT
+);
+INSERT INTO Students(id,name,dept,age)
+VALUES
+    (1,"Shakthi","ECE",20),
+    (2,"Logo","ECE",20),
+    (3,"Niranch","CSE",19),
+    (4,"Madhu","EEE",18),
+    (5,"Kiruba","EEE",18),
+    (6,"Kavin","EEE",19),
+    (7,"Kousalya","MECH",20),
+    (8,"Kumar","CSE",29),
+    (9,"Rahman","MECH",25),
+    (10,"Ilakiya","CSE",22);
+ALTER TABLE Students ADD COLUMN mobile VARCHAR(10);
+UPDATE Students SET mobile="8098421814" WHERE id=1;
+DELETE FROM Students WHERE id=10;
+SELECT COUNT(*)
+FROM Students
+WHERE dept="ECE";
+SELECT COUNT(*)
+FROM Students
+WHERE dept="EEE";
+SELECT COUNT(*)
+FROM Students
+WHERE dept="CSE";
+SELECT COUNT(*)
+FROM Students
+WHERE dept="MECH";
